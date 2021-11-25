@@ -21,7 +21,10 @@ class Window(QMainWindow):
         if self.draw:
             qp = QPainter()
             qp.begin(self)
-            qp.setBrush(QColor('yellow'))
+            r = random.randint(0, 255)
+            g = random.randint(0, 255)
+            b = random.randint(0, 255)
+            qp.setBrush(QColor(r, g, b))
             r = random.randint(2, 50)
             qp.drawEllipse(50, 50, r, r)
             qp.end()
